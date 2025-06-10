@@ -1,7 +1,7 @@
 # HealthShare
-A lightweight permissioned and decentralized healthcare application that implements Attribute Based Access Control (ABAC) using HyperLedger Fabric (Fablo)
+A lightweight permissioned and decentralized healthcare application that implements Attribute Based Access Control (ABAC) using HyperLedger Fabric (Fablo - https://github.com/hyperledger-labs/fablo/blob/main/README.md)
 
-Clone/locally save this repository on your Linux machine. Create another folder (not inside HealthShare) and in that directory (for example: cd Desktop/App) run the below commands:
+Clone/locally save this repository on your Linux machine. Create another folder (not inside HealthShare) and in that directory (for example: cd Desktop/App) run the below commands (on Command Line Prompt):
 
 nvm install 12.22.12
 nvm use 12.22.12
@@ -23,3 +23,5 @@ Finally, run the below command:
 fablo up fablo-config.json
 
 The network is set up, chaincodes packaged and installed, organizations and channels created.
+
+For information on how to use Fablo, refer to the link at the top of the page
