@@ -24,4 +24,4 @@ fablo up fablo-config.json
 
 The network is set up, chaincodes packaged and installed, organizations and channels created.
 
-For information on how to use Fablo, refer to the link at the top of the page
+For information on how to use Fablo, refer to https://github.com/hyperledger-labs/fablo
