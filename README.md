@@ -1,15 +1,15 @@
 # HealthShare
-A lightweight permissioned and decentralized healthcare application that implements Attribute Based Access Control (ABAC) using HyperLedger Fabric (Fablo - https://github.com/hyperledger-labs/fablo/blob/main/README.md)
+A lightweight permissioned and decentralized healthcare application that implements Attribute Based Access Control (ABAC) using HyperLedger Fabric (Fablo - https://github.com/hyperledger-labs/fablo/blob/main/README.md)  
 
-Clone/locally save this repository on your Linux machine. Create another folder (not inside HealthShare) and in that directory (for example: cd Desktop/App) run the below commands (on Command Line Prompt):
+Clone/locally save this repository on your Linux machine. Create another folder (not inside HealthShare) and in that directory (for example: cd Desktop/App) run the below commands (on Command Line Prompt):  
 
-nvm install 12.22.12
-nvm use 12.22.12
-npm install -g npm@6.14.17
-rm -rf node_modules package-lock.json
-npm install
-sudo apt-get update
-sudo apt-get install -y build-essential python3
+nvm install 12.22.12  
+nvm use 12.22.12  
+npm install -g npm@6.14.17  
+rm -rf node_modules package-lock.json  
+npm install  
+sudo apt-get update  
+sudo apt-get install -y build-essential python3  
 
 Once you have these installed, execute the below commands:
 sudo curl -Lf https://github.com/softwaremill/fablo/releases/download/0.2.0/fablo.sh -o /usr/local/bin/fablo && sudo chmod +x /usr/local/bin/fablo
