@@ -1,0 +1,140 @@
+{
+  "$schema": "https://github.com/softwaremill/fablo/releases/download/0.2.0/schema.json",
+  "networkSettings": {
+    "fabricVersion": "2.3.2",
+    "tls": false
+  },
+  "rootOrg": {
+    "organization": {
+      "name": "Orderer",
+      "domain": "root.com"
+    },
+    "orderer": {
+      "type": "solo",
+      "instances": 1
+    }
+  },
+  "orgs": [
+    {
+      "organization": {
+        "name": "HospitalOrg",
+        "domain": "hospital.com"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      }
+    },
+    {
+      "organization": {
+        "name": "InsuranceOrg",
+        "domain": "insurance.com"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      }
+    },
+    {
+      "organization": {
+        "name": "LabOrg",
+        "domain": "lab.com"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      }
+    },
+    {
+      "organization": {
+        "name": "AuditOrg",
+        "domain": "audit.com"
+      },
+      "peer": {
+        "instances": 1,
+        "db": "LevelDb"
+      }
+    }
+  ],
+  "channels": [
+    {
+      "name": "ehr-channel",
+      "orgs": [
+        {
+          "name": "HospitalOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "AuditOrg",
+          "peers": ["peer0"]
+        }
+      ]
+    },
+    {
+      "name": "insurance-channel",
+      "orgs": [
+        {
+          "name": "HospitalOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "InsuranceOrg",
+          "peers": ["peer0"]
+        }
+      ]
+    },
+    {
+      "name": "lab-channel",
+      "orgs": [
+        {
+          "name": "HospitalOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "LabOrg",
+          "peers": ["peer0"]
+        }
+      ]
+    },
+    {
+      "name": "audit-channel",
+      "orgs": [
+        {
+          "name": "AuditOrg",
+          "peers": ["peer0"]
+        }
+      ]
+    },
+    {
+      "name": "public-channel",
+      "orgs": [
+        {
+          "name": "HospitalOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "InsuranceOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "LabOrg",
+          "peers": ["peer0"]
+        },
+        {
+          "name": "AuditOrg",
+          "peers": ["peer0"]
+        }
+      ]
+    }
+  ],
+  "chaincodes": [
+    {
+      "name": "healthcare-cc",
+      "version": "0.0.1",
+      "lang": "node",
+      "channel": "ehr-channel",
+      "directory": "./chaincodes/chaincode-kv-node"
+    }
+  ]
+}
+
