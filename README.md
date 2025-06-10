@@ -11,15 +11,15 @@ npm install
 sudo apt-get update  
 sudo apt-get install -y build-essential python3  
 
-Once you have these installed, execute the below commands:
-sudo curl -Lf https://github.com/softwaremill/fablo/releases/download/0.2.0/fablo.sh -o /usr/local/bin/fablo && sudo chmod +x /usr/local/bin/fablo
-fablo init node
+Once you have these installed, execute the below commands:  
+sudo curl -Lf https://github.com/softwaremill/fablo/releases/download/0.2.0/fablo.sh -o /usr/local/bin/fablo && sudo chmod +x /usr/local/bin/fablo  
+fablo init node  
 
-Now, copy the files fabric-config.json (in HealthShare), index.js, package.json, package-lock.json (in HealthShare/chaincodes/chaincode-kv-node) and paste them into their respective areas inside your App directory and replace the existing files.
-fablo-config.json contains the architecture (channels, organizations, chaincode arrays)
-index.js bears the entirety of the chaincode logic
+Now, copy the files fabric-config.json (in HealthShare), index.js, package.json, package-lock.json (in HealthShare/chaincodes/chaincode-kv-node) and paste them into their respective areas inside your App directory and replace the existing files.  
+fablo-config.json contains the architecture (channels, organizations, chaincode arrays)  
+index.js bears the entirety of the chaincode logic  
 
-Finally, run the below command:
+Finally, run the below command:  
 fablo up fablo-config.json
 
 The network is set up, chaincodes packaged and installed, organizations and channels created.
