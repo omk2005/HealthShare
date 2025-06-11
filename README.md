@@ -16,8 +16,8 @@ sudo curl -Lf https://github.com/softwaremill/fablo/releases/download/0.2.0/fabl
 fablo init node  
 
 Now, copy the files fabric-config.json (in HealthShare), index.js, package.json, package-lock.json (in HealthShare/chaincodes/chaincode-kv-node) and paste them into their respective areas inside your App directory and replace the existing files.  
-fablo-config.json contains the architecture (channels, organizations, chaincode arrays)  
-index.js bears the entirety of the chaincode logic  
+**fablo-config.json** contains the architecture (channels, organizations, chaincode arrays)  
+**index.js** bears the entirety of the chaincode logic  
 
 Finally, run the below command:  
 fablo up fablo-config.json
